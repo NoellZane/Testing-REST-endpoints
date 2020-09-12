@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/NoellZane/Testing-REST-endpoints.svg?branch=master)](https://travis-ci.org/NoellZane/Testing-REST-endpoints)
-
+Just had to remake repo, hopefully this all still works.
 All the mandatory exercises are done.
 Added all the JSDay 1 files in a seperate folder in the root. 
 The Exercises from day 2 are on HTML pages, with links in the nav bar. 
