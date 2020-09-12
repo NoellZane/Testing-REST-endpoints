@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-09-2020, 10:32:48
+    Author     : Noell Zane
+*/
+
+html{font-family:Arial, Helvetica, sans-serif; overflow-y:scroll; min-width:1000px}
+body{font-size:14px; line-height:1.5em}
+
+h1, h2, h3, h4, h5, h6{margin:1.5em 0 .833em; font-weight:bold; line-height:1em}
+h1, .h1{font-size:2em}
+h2, .h2{font-size:1.6em}
+h3, .h3{font-size:1.4em}
+h4, .h4{font-size:1.2em}
+h5, .h5{font-size:1.1em}
+h6, .h6{font-size:1em}
+
+p{margin:1em 0}
+small{font-size:.833em}
+em, i{font-style:italic}
+strong, b{font-weight:bold}
+code, pre{font-family:monospace}
+
+
+.hoverable {
+  display: inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: fixed;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property: transform;
+}
+
+.hoverable:before {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus {
+  transform: translateY(-5px);
+}
+
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+/*everything below here is just setting up the page, so dont worry about it */
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center !important;
+    float: none;
+     display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  }
+}
+body {
+  background-color: black;
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+}
+
+nav {
+  background: none !important;
+ /*text-transform: uppercase;*/
+}
+nav li {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+nav li a {
+  transition: .5s color ease-in-out;
+}
+
+.page-title {
+  opacity: .75 !important;
+}
+
+.btn{
+  color:darkslategray;
+}
+
+table{
+  width: 100%
+}
+
+th{
+  text-align: center;
+}
+.textField{
+background-color: gray;
+}
+
+/* CALCULATOR STUFF */
+
+#container{
+	width: 226px;
+	height: 274px;
+	border: 3px solid darkblue;
+  margin: auto;
+  
+}
+.t1, .t4{
+	border: 1px solid white;
+	height: 48px;
+	margin-left: 3px;
+	margin-top: 3px;
+	display: inline-block;
+  line-height: 48px;
+  text-align: none;
+
+}
+.t1{
+	width: 48px;
+}
+.t4{
+  width: 219px;
+  text-align: none;
+
+}
+
+.Calculator{
+  text-align: none;
+
+}

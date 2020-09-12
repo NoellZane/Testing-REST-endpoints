@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+  <title>Map To Create Lists - Exercise 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+          <a id="len1" class="hoverable" href="index.html">Home</a>
+        </li>
+        <li>
+          <a id="len2" class="hoverable" href="Ex1-SimpleDOM.html">Link to exercise 1</a>
+        </li>
+        <li>
+          <a id="len3" class="hoverable" href="Ex2-EventBubbling.html">Link to exercise 2</a>
+        </li>
+        <li>
+          <a id="len4" class="hoverable" href="Ex3-MapToCreateLists.html">Link to exercise 3</a>
+        </li>
+        <li>
+          <a id="len5" class="hoverable" href="Ex4-MapAndFilterDynamicTables.html">Link to exercise 4</a>
+        </li>
+        <li>
+          <a id="len6" class="hoverable" href="Ex5-Calculator.html">Link to exercise 5</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="array"></div>
+  <div id="output"></div>
+
+  <!--Assignment b)-->
+  <form action="#">
+    <input type="text" id="inputName" name="inputField" value="" class="textField" />
+    <input type="submit" value="Submit" id="submitBtn" class="btn" />
+    <br><br>
+    <input type="submit" value="Remove First" id="removeFirst" class="btn" />
+    <input type="submit" value="Remove Last" id="removeLast" class="btn" />
+  </form>
+
+  <script>
+    let names = ["Lars", "Peter", "Jan", "Ian"];
+    //Assignment a)
+    function showData(names) {
+      let formatName = names.map(function (name) {
+        return "<li>" + name + "</li>";
+      });
+      let join = (document.getElementById("array").innerHTML = formatName.join(" "));//To get rid of the ,
+    }
+    showData(names); //Display names
+    submitBtn = document.getElementById("submitBtn");
+    removeFirstBtn = document.getElementById("removeFirst");
+    removeLastBtn = document.getElementById("removeLast");
+
+    submitBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      let data = document.getElementById("inputName").value; //Get whatever is put into the inputfield.
+      //console.log(data); //Added log for testing purposes to see if I got data.
+      names.push(data); //Adds the name to the end of the array
+      showData(names); //Calling showData to update the list of names
+    });
+    //Assignment c)
+    removeFirstBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      names.shift(); //Removes first element in the array.
+      showData(names); //Calling showData to update the list of names
+    });
+
+    removeLastBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      names.pop(); //Removes last element in the array
+      showData(names);//Calling showData to update the list of names
+    });
+  </script>
+</body>
+
+</html>

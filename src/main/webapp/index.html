@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Day 2 exercises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <script src="index.js"></script>
+    </head>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a id="len1" class="hoverable" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a id="len2" class="hoverable" href="Ex1-SimpleDOM.html">Link to exercise 1</a>
+                </li>
+                <li>
+                    <a id="len3" class="hoverable" href="Ex2-EventBubbling.html">Link to exercise 2</a>
+                </li>
+                <li>
+                    <a id="len4" class="hoverable" href="Ex3-MapToCreateLists.html">Link to exercise 3</a>
+                </li>
+                <li>
+                    <a id="len5" class="hoverable" href="Ex4-MapAndFilterDynamicTables.html">Link to exercise 4</a>
+                </li>
+                <li>
+                    <a id="len6" class="hoverable" href="Ex5-Calculator.html">Link to exercise 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <body>
+         <h3>Use the nav bar to navigate through the exercises</h3>
+         <h4>All the mandatory exercises are done. Added all the JSDay 1 files in a seperate folder in the root. The Exercises from day 2 are on HTML pages, with links in the nav bar. I will also add the link to the repo with all the projects in seperate files.</h4>
+         <h3><a href="https://github.com/NoellZane/Testing-REST-endpoints">Link to Github this movie project</a></h3>
+         <h3><a href="https://github.com/NoellZane/Testing-REST-endpoints">Link to Github all of this week's code.</a></h3>
+         <h3><a href="https://travis-ci.org/github/NoellZane/Testing-REST-endpoints">Link to Travis Build Status</a></h3>
+
+         <h2>Movies API:</h2>
+        <div id="result">
+            
+            <input type="submit" value="Fetch All Movies" id="allMovies" class="btn" />
+            <input type="text" id="inputMovieByID" value="" class="textField" />
+            <input type="submit" value="Fetch Movie By ID" id="fetchMovieByID" class="btn" />
+            <input type="text" id="inputMovieByTitle" value="" class="textField" />
+            <form method="POST" action="#">
+                <input type="submit"/>
+            <input type="submit" value="Fetch Movie By Title" id="fetchMovieByTitle" class="btn" />
+        </div>
+        <script>
+        submitBtn = document.getElementById("submitBtn");
+        inputPrice = document.getElementById("inputPrice");
+            submitBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            let priceLessThan = inputPrice.value;
+
+        </script>
+        
+        <!--<img src="Joke.jpg" height="500" width="600" alt="Joke"> -->
+    </body>
+
+</html>

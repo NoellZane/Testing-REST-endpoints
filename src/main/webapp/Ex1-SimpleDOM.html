@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple DOM Manipulation - Exercise 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+          <a id="len1" class="hoverable" href=" index.html">Home</a>
+        </li>
+        <li>
+          <a id="len2" class="hoverable" href="Ex1-SimpleDOM.html">Link to exercise 1</a>
+        </li>
+        <li>
+          <a id="len3" class="hoverable" href="Ex2-EventBubbling.html">Link to exercise 2</a>
+        </li>
+        <li>
+          <a id="len4" class="hoverable" href="Ex3-MapToCreateLists.html">Link to exercise 3</a>
+        </li>
+        <li>
+          <a id="len5" class="hoverable" href="Ex4-MapAndFilterDynamicTables.html">Link to exercise 4</a>
+        </li>
+        <li>
+          <a id="len6" class="hoverable" href="Ex5-Calculator.html">Link to exercise 5</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid"></div>
+  <div id="div1" class="div">Div 1</div>
+  <div id="div2" class="div">Div 2</div>
+  <div id="div3" class="div">Div 3</div>
+  <div id="div4" class="div">Div 4</div>
+  <div id="div5" class="div">Div 5</div>
+  <div id="div6" class="div">Div 6</div>
+  <button id="btn" class="btn">Change Colors</button>
+  <script>
+
+    function colorDiv() {
+      //Sorry edited this cause it messed with my nav bar's color!
+      let divArray = Array.from(document.getElementsByClassName("div"));
+
+      divArray.forEach(function (element) {
+        element.style.backgroundColor = "Grey";
+      });
+    }
+    colorDiv();
+
+    //Sorry I also added extra divs so I could make a rainbow flag. Sorry, not sorry.
+    function changeColors() {
+      let div1 = document.getElementById("div1");
+      div1.style.backgroundColor = "Red";
+
+      let div2 = document.getElementById("div2");
+      div2.style.backgroundColor = "Orange";
+
+      let div3 = document.getElementById("div3");
+      div3.style.backgroundColor = "Yellow";
+
+      let div4 = document.getElementById("div4");
+      div4.style.backgroundColor = "Green";
+
+      let div5 = document.getElementById("div5");
+      div5.style.backgroundColor = "Blue";
+
+      let div6 = document.getElementById("div6");
+      div6.style.backgroundColor = "Purple";
+    }
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+      changeColors();
+    });
+  </script>
+</body>
+
+</html>
